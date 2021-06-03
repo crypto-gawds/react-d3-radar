@@ -12,11 +12,11 @@ type RadarAxisProps = {
 };
 
 const defaultRadarAxisStyle = {
-  axisOverreach: 1.1,
+  axisOverreach: 1.0,
   labelOverreach: 1.2,
-  fontSize: 10,
-  fontFamily: 'sans-serif',
-  textFill: 'black',
+  fontSize: 11,
+  fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  textFill: 'white',
   axisWidth: 2,
 };
 

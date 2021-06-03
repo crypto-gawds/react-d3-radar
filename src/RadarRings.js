@@ -15,7 +15,7 @@ const defaultRadarRingsStyle = {
   fontFamily: 'sans-serif',
   fontSize: 10,
   ringOpacity: 0.1,
-  textFill: 'black',
+  textFill: 'white',
 };
 
 export default function RadarRings(props: RadarRingsProps) {
@@ -31,30 +31,30 @@ export default function RadarRings(props: RadarRingsProps) {
         return (
           <circle
             key={`${tickValue}`}
-            fillOpacity={ringOpacity}
-            fill={color}
+            fillOpacity={0}
+            fill={'#000000'}
             stroke={color}
             r={scale(tickValue)}
           />
         );
       })}
-      {outerFirst.map(tickValue => {
-        return (
-          <text
-            key={`${tickValue}-tick`}
-            x={0}
-            y={-scale(tickValue)}
-            dx={'0.4em'}
-            dy={'0.4em'}
-            fontFamily={fontFamily}
-            fontSize={fontSize}
-            textAnchor={'left'}
-            fill={textFill}
-          >
-            {format(tickValue)}
-          </text>
-        );
-      })}
+      {/* {outerFirst.map(tickValue => { */}
+      {/*   return ( */}
+      {/*     <text */}
+      {/*       key={`${tickValue}-tick`} */}
+      {/*       x={0} */}
+      {/*       y={-scale(tickValue)} */}
+      {/*       dx={'0.4em'} */}
+      {/*       dy={'0.4em'} */}
+      {/*       fontFamily={fontFamily} */}
+      {/*       fontSize={fontSize} */}
+      {/*       textAnchor={'left'} */}
+      {/*       fill={textFill} */}
+      {/*     > */}
+      {/*       {format(tickValue)} */}
+      {/*     </text> */}
+      {/*   ); */}
+      {/* })} */}
     </g>
   );
 }

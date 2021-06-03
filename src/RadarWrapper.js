@@ -26,8 +26,8 @@ type Props = {
 
 const defaultRadarStyle = {
   numRings: 4,
-  axisColor: '#cdcdcd',
-  ringColor: '#cdcdcd',
+  axisColor: '#4B5563',
+  ringColor: '#4B5563',
 };
 
 function getHovered(

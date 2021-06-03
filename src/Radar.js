@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import {schemeCategory10} from 'd3-scale';
 import {voronoi} from 'd3-voronoi';
 import _ from 'lodash';
 import {
@@ -22,6 +21,9 @@ type Props = {
   onHover?: (point: RadarPoint | null) => void,
   highlighted: ?RadarPoint,
 };
+
+// TODO: Allow the color scale to be passed in as a prop
+const colorScheme = ['#ce034c'];
 
 function convertData(props) {
   const {data, width, height, padding, domainMax} = props;
@@ -71,7 +73,7 @@ export default function Radar(props: Props) {
 
   const colors = {};
   forEachArray(allPoints, ({setKey}, idx) => {
-    colors[setKey] = schemeCategory10[idx];
+    colors[setKey] = colorScheme[idx];
   });
 
   const [highlightedPoints, regularPoints] = _.partition(
